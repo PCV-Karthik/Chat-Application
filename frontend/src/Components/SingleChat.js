@@ -121,7 +121,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
     fetchMessages();
 
     selectedChatCompare = selectedChat;
-  }, [selectedChat]);
+  }, [selectedChat,fetchAgain]);
 
   useEffect(() => {
     socket.on("message recieved", (newMessageRecieved) => {
